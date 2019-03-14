@@ -1,0 +1,78 @@
+.slider>div:not(.slider__umr){
+  display: none;
+}
+
+.slider{
+  width: 100vw;
+  flex-basis: 80vh;
+  .slider__umr{
+    @include size(100%, 100%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.details{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button{
+  .button__inner{
+    background: $gradient2;
+    border-radius: .3rem .3rem;
+    padding: .32rem .3rem .3rem .3rem;
+    display: inline-block;
+    @include flexcenter();
+    cursor: pointer;
+
+    p{
+      background-color: #fff;
+      padding: .7rem .5rem .5rem .4rem;
+      display: inline-block;
+      z-index: 1;
+    }
+  }
+}
+.umr__header{
+  background-color: #000;
+  color: #fff;
+  width: fit-content;
+  padding: 1rem 1.8rem 0 .3rem;
+  align-self: flex-start;
+  h1{
+    display: inline-block;
+    font-size: 38px;
+  }
+}
+.page__2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .arrow{
+    flex-basis:1; 
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.projects{
+  @include flexcenter();
+  margin-bottom: 2rem 0;
+  padding-bottom: 2rem;
+  .projects__dot{
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin: 0 .5rem .05rem .5rem;
+   @include size(15px, 15px);
+  }
+  .projects__menu{
+    margin-left: 1rem;
+  }
+}

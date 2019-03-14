@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.905" height="29.911" viewBox="0 0 25.905 29.911">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#009fff"/>
+      <stop offset="0.419" stop-color="#40025f"/>
+      <stop offset="1" stop-color="#ec2f4b"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_34" data-name="Groupe 34" transform="translate(-725.766 82.355) rotate(-90)">
+    <path id="Union_1" data-name="Union 1" d="M-95.934,208.146l.464-.457-.008-.008,11.942-11.747,3.837,3.776-5.112,5.03h17.576v6.874h-17.5l5.129,5.046-3.837,3.776Z" transform="translate(149.091 530.534)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

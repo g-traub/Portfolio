@@ -1,0 +1,10 @@
+@mixin flexcenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin size($width, $height: auto){
+  width: $width;
+  height: $height;
+}
