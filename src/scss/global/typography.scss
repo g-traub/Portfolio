@@ -1,4 +1,4 @@
-html{
+body{
   font-family: 'Minimal Mono';
   font-size: 16px;
 }
@@ -27,11 +27,11 @@ span{
   font-weight: bold;
 }
 
-.page__1 span{
+.page1 span{
   font-weight: normal;
 }
 
-.page__1 .page__subheader {
+.page1__subheader {
   h2{
     font-size: 30px;
     font-family: 'Mont';

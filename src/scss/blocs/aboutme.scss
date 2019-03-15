@@ -1,0 +1,72 @@
+.page3 { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    padding: .5rem 2rem;
+    display: inline-block;
+  }
+  .content h2{
+    font-size: 1.2rem;
+    font-family: 'Minimal Mono';
+    font-style: normal;
+    font-weight: normal;
+    &::after{
+      width: 100%;
+    }
+  }
+  h3 {
+    font-family: 'Galaxie Polaris';
+    font-style: italic;
+    font-weight: normal;
+    font-size: .9rem;
+  }
+  .social{
+    display: flex;
+    justify-content: space-between;
+    .social__networks{
+      margin-left: 2%;
+    }
+    svg{
+      margin: .2rem;
+    }
+  }
+}
+
+.contact h2::after, .page3__title::after{
+  content: ' ';
+  display: block;
+  height:.24em;
+  background: $gradient1;;
+}
+
+.page3__title{
+  font-size: 1.8rem;
+  transform: rotate(-6deg) translateX(-5px);
+  &::after{
+    width: 110%;
+  }
+}
+.content{
+  width:85vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 1.4;
+  .intro{
+    margin-bottom: 1rem;
+  }
+  p{
+    margin: .8rem 0;
+  }
+}  
+.contact{
+  @include flexcenter();
+  font-size: 1.2rem;
+  margin-right: 2%;
+  svg {
+    width: 28px;
+  }  
+}  

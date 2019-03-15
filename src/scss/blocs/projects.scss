@@ -24,8 +24,8 @@
 .button{
   .button__inner{
     background: $gradient2;
-    border-radius: .3rem .3rem;
-    padding: .32rem .3rem .3rem .3rem;
+    border-radius: .2rem .2rem;
+    padding: .3rem .3rem .3rem .312rem ;
     display: inline-block;
     @include flexcenter();
     cursor: pointer;
@@ -49,7 +49,7 @@
     font-size: 38px;
   }
 }
-.page__2{
+.page2{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,6 +71,9 @@
     border-radius: 50%;
     margin: 0 .5rem .05rem .5rem;
    @include size(15px, 15px);
+  }
+  .projects__dot:first-of-type{
+    background: #000;
   }
   .projects__menu{
     margin-left: 1rem;
