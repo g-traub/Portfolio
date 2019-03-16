@@ -4,78 +4,104 @@
 
 .slider{
   width: 100vw;
-  flex-basis: 80vh;
-  .slider__umr{
-    @include size(100%, 100%);
-    padding: 2rem;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width:1300px){
+    flex-direction: row-reverse;
+  }
+  .slide{
+    width: 90vw;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-  }
-}
-.details{
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.button{
-  .button__inner{
-    background: $gradient2;
-    border-radius: .2rem .2rem;
-    padding: .3rem .3rem .3rem .312rem ;
-    display: inline-block;
-    @include flexcenter();
-    cursor: pointer;
-
-    p{
-      background-color: #fff;
-      padding: .7rem .5rem .5rem .4rem;
-      display: inline-block;
-      z-index: 1;
+    justify-content: space-around;
+    @media (min-width:1300px){
+    justify-content: flex-end;
+    }
+    .slide__header{
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 1.8rem 0 .3rem;
+      width: fit-content;
+      align-self: flex-start;
+      @media (min-width:1300px){
+        display: none;
+      }
+    }
+    .slide__image{
+      margin: 0 auto;
     }
   }
 }
-.umr__header{
-  background-color: #000;
-  color: #fff;
-  width: fit-content;
-  padding: 1rem 1.8rem 0 .3rem;
-  align-self: flex-start;
-  h1{
-    display: inline-block;
-    font-size: 38px;
-  }
+
+.button__inner p{
+text-align: center;
 }
 .page2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  .arrow{
-    flex-basis:1; 
-    display: flex;
-    align-items: flex-end;
+  justify-content: flex-start;
+
+  h2{
+    display: inline-block;
+    font-size: 38px;
+    font-family: 'Mont';
   }
 }
 
 .projects{
-  @include flexcenter();
-  margin-bottom: 2rem 0;
-  padding-bottom: 2rem;
+  padding: 5%;
+  display: flex;
+  @media (min-width:1300px){
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  h2{
+    display: none;
+    @media (min-width:1300px){
+      display: block;
+      margin:  5% 0;
+    }
+  }
   .projects__dot{
     display: inline-block;
     border: 2px solid #000;
     border-radius: 50%;
-    margin: 0 .5rem .05rem .5rem;
-   @include size(15px, 15px);
+    margin: 0 .5rem ;
+    @include size(15px, 15px);
+    @media (min-width:1300px){
+    display: none;
+    }
   }
-  .projects__dot:first-of-type{
-    background: #000;
+
+  a:first-of-type {
+    .projects__dot{
+      background: #000;
+    }
+    @media (min-width:1300px){
+      h2{
+        background: #000;
+        color: #fff;
+        padding: 1rem 1.8rem 0 .3rem;
+        font-size: 3rem;
+        &::after{
+          content:'Javascript';
+          font-family: 'Minimal Mono';
+          font-size: 1rem;
+        }
+      }
+    }
   }
+    
   .projects__menu{
     margin-left: 1rem;
+    @media (min-width:1300px){
+      margin: 3rem 0;
+      text-decoration: underline;
+    }
   }
 }

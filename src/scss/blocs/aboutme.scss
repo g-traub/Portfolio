@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   h1 {
     padding: .5rem 2rem;
     display: inline-block;
@@ -43,12 +42,17 @@
 
 .page3__title{
   font-size: 1.8rem;
-  transform: rotate(-6deg) translateX(-5px);
+  transform: rotate(-3deg) translateX(-5px);
   &::after{
     width: 110%;
   }
 }
+
 .content{
+  display: flex;
+}
+
+.content__about, .content__looking{
   width:85vw;
   margin: 0 auto;
   display: flex;
@@ -61,7 +65,17 @@
   p{
     margin: .8rem 0;
   }
+  @media (min-width:1300px){
+    width: 40vw;
+  }
 }  
+.content__looking{
+  align-items: center;
+  display: none;
+  @media (min-width:1300px){
+    display: flex;
+  }
+}
 .contact{
   @include flexcenter();
   font-size: 1.2rem;

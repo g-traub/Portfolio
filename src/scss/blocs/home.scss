@@ -2,15 +2,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  
   .social__icon{
   margin:1rem;
   }
 }
 
+.headers{
+  margin-top:-6%;
+}
 .page1__header{
-  width: 80vw;
-  height: 30vh;
+  width: 90vw;
+  height: 28vh;
   margin: 0 auto;
   @include flexcenter();
   color: #fff;
@@ -19,7 +21,7 @@
 }
 
 .page1__subheader{
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
 }
 
@@ -32,4 +34,8 @@
 
 .arrow{
   text-align: center;
+
+  p{
+    display:none;
+  }
 }
