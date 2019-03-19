@@ -113,8 +113,7 @@
     cursor: pointer;
     margin-left: 1rem;
     @media (min-width:1000px){
-      margin: 3rem 0;
-      text-decoration: underline;
+      display: none;
     }
   }
 }
@@ -143,16 +142,21 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    div{
-      padding: 1rem;
-      display: flex;
-      height: calc(90vh/6);
-      margin: 0 1.2rem;
+    a {
       border-bottom: 1px solid #fff;
     }
-    div:last-of-type{
+    div{
+      cursor: pointer;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      height: calc(90vh/6);
+      margin: 0 1.2rem;
+      svg{
+       width:15vw;
+      }
+    }
+    a:last-of-type{
       border-bottom: none;
     }
     h3{

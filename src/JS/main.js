@@ -10,10 +10,10 @@ const render = num => {
   body.classList.remove('menu--open');
   html.classList.remove('menu--open');
 
-  for (slide of slides){
+  for (let slide of slides){
     slide.classList.remove('visible');
   }
-  for (dot of dots){
+  for (let dot of dots){
     dot.classList.remove('active');
   }
   slides[num].classList.add('visible');
@@ -80,8 +80,19 @@ allNode.addEventListener('click', () => {
   body.classList.add('menu--open');
   html.classList.add('menu--open');
 })
-menuCross.addEventListener('click', () => {
+menuCross.addEventListener('click', closeMenu); 
+
+
+//Menu click events
+const menuItems = document.querySelectorAll('.menuScreen nav div');
+for(let item of menuItems){
+  item.addEventListener('click', e => {
+    closeMenu();
+  })
+}
+
+function closeMenu () {
   menuScreen.classList.remove('visible');
   body.classList.remove('menu--open');
   html.classList.remove('menu--open');
-}); 
+}
