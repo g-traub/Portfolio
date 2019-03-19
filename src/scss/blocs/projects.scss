@@ -1,25 +1,30 @@
-.slider>div:not(.slider__umr){
+.slider>div{
   display: none;
 }
-
+.visible{
+  display: flex !important;
+}
+.menu--open{
+  overflow: hidden;
+}
 .slider{
+  position: relative;
   width: 100vw;
   height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width:1100px){
+  @media (min-width:1000px){
     flex-direction: row-reverse;
   }
   .slide{
     width: 90vw;
     height: 80%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    @media (min-width:1100px){
-    justify-content: flex-end;
+    @media (min-width:1000px){
+      justify-content: flex-end;
     }
     .slide__header{
       background-color: #000;
@@ -27,81 +32,163 @@
       padding: 1rem 1.8rem 0 .3rem;
       width: fit-content;
       align-self: flex-start;
-      @media (min-width:1100px){
+      @media (min-width:1000px){
         display: none;
       }
     }
     .slide__image{
-      margin: 0 auto;
+      margin: 1rem auto;
     }
   }
 }
 
 .button__inner p{
-text-align: center;
+  text-align: center;
 }
 .page2{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
+  
   h2{
     display: inline-block;
     font-size: 38px;
     font-family: 'Mont';
   }
+  .arrow{
+    margin-top: 15px;
+  }
 }
 
 .projects{
   padding: 5%;
+  width: 100vw;
   display: flex;
-  @media (min-width:1100px){
+  justify-content: center;
+  @media (min-width:1000px){
     flex-direction: column;
     align-items: flex-start;
+    width: 50vw;
   }
-  h2{
+  
+  .button{
     display: none;
-    @media (min-width:1100px){
+    position: relative;
+    
+    @media (min-width:1000px){
       display: block;
       margin:  5% 0;
+      padding: 1rem 1.8rem 0 .3rem;
     }
+    h3{
+      visibility: hidden;
+    }
+    &::after{
+      content:" ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 10px;
+      width: 0;
+      background: #000;
+      z-index: -1;
+      animation: .3s forwards no-hover linear;
+    }
+    
   }
-  .projects__dot{
+  span:not(.projects__menu){
     display: inline-block;
     border: 2px solid #000;
     border-radius: 50%;
     margin: 0 .5rem ;
     @include size(15px, 15px);
-    @media (min-width:1100px){
-    display: none;
+    @media (min-width:1000px){
+      display: none;
     }
   }
-
-  a:first-of-type {
-    .projects__dot{
-      background: #000;
-    }
-    @media (min-width:1100px){
-      h2{
-        background: #000;
-        color: #fff;
-        padding: 1rem 1.8rem 0 .3rem;
-        font-size: 3rem;
-        &::after{
-          content:'Javascript';
-          font-family: 'Minimal Mono';
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-    
+  
   .projects__menu{
+    cursor: pointer;
     margin-left: 1rem;
-    @media (min-width:1100px){
+    @media (min-width:1000px){
       margin: 3rem 0;
       text-decoration: underline;
     }
+  }
+}
+
+//menu overlay
+.menuScreen{
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, .95);
+  z-index:2;
+  position: fixed;
+  top:0;
+  .exit{
+    text-align: right;
+    svg{
+      padding:.3rem;
+      margin: .6rem;
+      cursor: pointer;
+    }
+  }
+  nav {
+    height: 90%;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    div{
+      padding: 1rem;
+      display: flex;
+      height: calc(90vh/6);
+      margin: 0 1.2rem;
+      border-bottom: 1px solid #fff;
+    }
+    div:last-of-type{
+      border-bottom: none;
+    }
+    h3{
+      margin: auto 0;
+      color: #fff;
+      font-family: 'Mont';
+      font-weight: 900;
+      font-style: italic;
+      cursor: pointer;
+      width: 100%;
+      font-size: 2rem;
+      text-align: right;
+    }
+  }
+}
+
+.active {
+  span{
+    background-color: #000;
+  }
+  @media (min-width:1000px){
+    .button{
+      color: #fff;
+      &::after, &:hover::after{
+        animation: .2s forwards activer linear;
+      }
+      h3{
+        visibility: visible !important;
+      }
+    }
+  }
+}
+
+.button{
+  &:hover::after{
+    animation: .3s forwards hover linear;
+    z-index:-1;
   }
 }
