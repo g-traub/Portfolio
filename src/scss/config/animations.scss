@@ -28,6 +28,14 @@
         height: 100%;
     }
   }
+  @keyframes activerBg {
+    0% {   
+        background-size:0 0;
+       }
+    100% {
+      background-size:100% 100%;
+    }
+  }    
   
   @keyframes no-activer{
     
