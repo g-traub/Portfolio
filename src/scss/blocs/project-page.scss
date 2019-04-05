@@ -1,0 +1,59 @@
+.returnArrow svg{
+  width: 35px;
+  height: auto;
+  margin: .8rem;
+}
+
+.project__header{
+  &::after{
+    content: ' ';
+    width: 100vw;
+    height:5px;
+    display: block;
+    background: $gradient3;
+  }
+}
+.header__subheader{
+  width: 80vw;
+  margin: 0 auto;
+  font-family: 'Mont';
+}
+.titles h3{
+  margin: .5rem 0;
+}
+.titles__mainTitle{
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 1.8rem 0 .3rem;
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-family: 'Mont';
+}
+.subheader__desc{
+  margin-bottom: 2rem;
+}
+.desc__text {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 1rem 0;
+}
+.desc__button{
+  border: 3px solid #000;
+  font-family: "Galaxie Polaris";
+  display: inline-block;
+  padding: .5rem 1.8rem;
+}
+.header__nav{
+  display: flex;
+  justify-content: space-between;
+}
+.nav__pre, .nav__nex{
+  background-color: #000;
+  color: #fff;
+  font-family: 'Mont';
+  padding: .2rem .5rem;
+  font-weight: 900;
+  font-style: italic;
+  display: inline-block;
+  margin:1rem;
+}
