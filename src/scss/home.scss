@@ -1,0 +1,14 @@
+@import 'vendors/reset';
+
+@import 'config/mixins';
+@import 'config/fonts';
+@import 'config/colors';
+@import 'config/media';
+@import 'config/animations';
+
+@import 'global/typography';
+@import 'global/layout';
+
+@import 'blocs/home';
+@import 'blocs/projects';
+@import 'blocs/aboutme';

@@ -32,27 +32,27 @@ const change = () => {
         render(savedState);
         break;
       }
+    case '#alfred-slide':
+    render(0);
+    localStorage.setItem('savedState', 0);
+    break;
     case '#umr-slide':
-      render(0);
-      localStorage.setItem('savedState', 0);
-      break;
-    case '#pacman-slide':
       render(1);
       localStorage.setItem('savedState', 1);
       break;
-    case '#morty-slide':
+    case '#pacman-slide':
       render(2);
       localStorage.setItem('savedState', 2);
       break;
-    case '#nissin-slide':
+    case '#morty-slide':
       render(3);
       localStorage.setItem('savedState', 3);
       break;
-    case '#socomptoir-slide':
+    case '#nissin-slide':
       render(4);
       localStorage.setItem('savedState', 4);
       break;
-    case '#akira-slide':
+    case '#socomptoir-slide':
       render(5);
       localStorage.setItem('savedState', 5);
       break;
@@ -66,7 +66,7 @@ const change = () => {
         break;
       }
     default:
-        window.location.hash = '#umr-slide';
+        window.location.hash = '#alfred-slide';
       break;
   }
 }
