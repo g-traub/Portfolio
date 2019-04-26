@@ -9,27 +9,30 @@
   <title>Guillaume Traub — Portfolio — UMR</title>
 </head>
 <body>
-  <div class="returnArrow">
-      <a href="../index.html#projects">
-        <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.032 -0.000488281L0 11.0315L2.6169 13.6484L2.60977 13.6555L10.5004 21.5461L13.4963 18.5502L8.01857 13.0725L26.9101 13.0725V8.83566L8.18764 8.83566L14.0279 2.99541L11.032 -0.000488281Z" fill="url(#paint0_linear)"/>
-          <defs>
-          <linearGradient id="paint0_linear" x1="-3.61355e-07" y1="1.09839" x2="13.2514" y2="24.8494" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#009FFF"/>
-          <stop offset="0.463" stop-color="#40025F"/>
-          <stop offset="1" stop-color="#EC2F4B"/>
-          </linearGradient>
-          </defs>
-          </svg>      
-      </a>
-  </div>
   <header class="project__header header">
+    <div class="returnArrow">
+        <a href="../index.html#projects">
+          <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.032 -0.000488281L0 11.0315L2.6169 13.6484L2.60977 13.6555L10.5004 21.5461L13.4963 18.5502L8.01857 13.0725L26.9101 13.0725V8.83566L8.18764 8.83566L14.0279 2.99541L11.032 -0.000488281Z" fill="url(#paint0_linear)"/>
+            <defs>
+            <linearGradient id="paint0_linear" x1="-3.61355e-07" y1="1.09839" x2="13.2514" y2="24.8494" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#009FFF"/>
+            <stop offset="0.463" stop-color="#40025F"/>
+            <stop offset="1" stop-color="#EC2F4B"/>
+            </linearGradient>
+            </defs>
+            </svg>      
+        </a>
+    </div>
     <div class="header__subheader subheader">
       <div class="subheader__titles titles">
-        <h1 class="titles__mainTitle">UMR</h1>
-        <h2 class="titles__subTitle">Javascript, CSS</h2>
-        <h3 class="titles__role">ROLE :  Frontend developer</h3>
+        <div class="titles__part">
+          <h1 class="titles__mainTitle">UMR</h1>
+          <h2 class="titles__subTitle">Javascript, CSS</h2>
+        </div>
+        <div class="titles__part"><h3 class="titles__role">ROLE :  Frontend developer</h3>
         <h3 class="titles__context">CONTEXT : School project</h3>
+        </div>
       </div>
       <div class="subheader__desc desc">
         <p class="desc__text">In four days, in a team of 5, we designed a shoes customization service. The added value of this service is that you can add fabric from a item of clothing that you own. Like any customization service you can change colors, but you can also add a picture or take one with your webcam to visualize your fabric on the shoe.<br>
@@ -41,13 +44,13 @@
         </div>
       </div>
     </div>
-    <nav class="header__nav nav">
-      <a href="alfred.html"><div class="nav__pre">Prev</div></a>
-      <a href="pacman.html"><div class="nav__nex">Next</div></a>
-    </nav>
   </header>
+  <nav class="header__nav nav">
+    <a href="alfred.html"><div class="nav__pre">Prev</div></a>
+    <a href="pacman.html"><div class="nav__nex">Next</div></a>
+  </nav>
   <main class="project__main">
-    <section class="main__part">
+    <section class="main__part main__part--first">
       <h2 class="part__title">Color & textures personalization</h2>
       <div class="part__content">
         <div class="content_texts">
@@ -65,7 +68,7 @@
       <h2 class="part__title">Inputting files</h2>
       <div class="part__content">
         <div class="content_texts">
-        <p class="texts__text">To be able to add a picture of a fabric, I used a <code>&lang;input type="file"&rang;</code>, that accepts png, and jpeg. 
+        <p class="texts__text">To be able to add a picture of a fabric, I used a &lang;input type="file"&rang;, that accepts png, and jpeg. 
           With JavaScript I <strong>displayed the image as a background and saved it’s local path as a dataset  in HTML.</strong> Then I resued the path to display the texture on the shoe. </p>
         <img src="../assets/img/input.png" alt="" class="texts__snippet">
         </div>
@@ -79,7 +82,7 @@
     <section class="main__part">
       <h2 class="part__title">Webcam & video</h2>
       <div class="part__content">
-        <p class="content__text">To take a picture with the webcam, I used <strong>WebRTC</strong> with <strong>a <code>&lang;video&rang;</code> and a <code>&lang;canvas&rang;</code></strong> on top of each other. 
+        <p class="content__text">To take a picture with the webcam, I used <strong>WebRTC</strong> with <strong>a &lang;video&rang; and a &lang;canvas&rang;</strong> on top of each other. 
           The canvas I used to capture the picture and after the picture is taken, I <strong>close the video stream and save the image</strong> to use it as a texture.</p>
         <video autoplay loop class="content__video">
           <source src="../assets/video/photo.mov"
