@@ -10,51 +10,90 @@
 </head>
 
 <body>
-  <div class="returnArrow">
-    <!-- svg -->
-    <a href="../index.html#projects">
-      <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M11.032 -0.000488281L0 11.0315L2.6169 13.6484L2.60977 13.6555L10.5004 21.5461L13.4963 18.5502L8.01857 13.0725L26.9101 13.0725V8.83566L8.18764 8.83566L14.0279 2.99541L11.032 -0.000488281Z"
-          fill="url(#paint0_linear)" />
-        <defs>
-          <linearGradient id="paint0_linear" x1="-3.61355e-07" y1="1.09839" x2="13.2514" y2="24.8494"
-            gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009FFF" />
-            <stop offset="0.463" stop-color="#40025F" />
-            <stop offset="1" stop-color="#EC2F4B" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </a>
-  </div>
   <header class="project__header header">
+    <div class="returnArrow">
+      <!-- svg -->
+      <a href="../index.html#projects">
+        <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.032 -0.000488281L0 11.0315L2.6169 13.6484L2.60977 13.6555L10.5004 21.5461L13.4963 18.5502L8.01857 13.0725L26.9101 13.0725V8.83566L8.18764 8.83566L14.0279 2.99541L11.032 -0.000488281Z"
+            fill="url(#paint0_linear)" />
+          <defs>
+            <linearGradient id="paint0_linear" x1="-3.61355e-07" y1="1.09839" x2="13.2514" y2="24.8494"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#009FFF" />
+              <stop offset="0.463" stop-color="#40025F" />
+              <stop offset="1" stop-color="#EC2F4B" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+    </div>
     <div class="header__subheader subheader">
       <div class="subheader__titles titles">
-        <h1 class="titles__mainTitle">Pacman</h1>
-        <h2 class="titles__subTitle">Javascript</h2>
-        <h3 class="titles__role">ROLE : Developer</h3>
-        <h3 class="titles__context">CONTEXT : Side project</h3>
+        <div class="titles__part">
+          <h1 class="titles__mainTitle">Pacman</h1>
+          <h2 class="titles__subTitle">Javascript</h2>
+        </div>
+        <div class="titles__part">
+          <h3 class="titles__role">ROLE : Developer</h3>
+          <h3 class="titles__context">CONTEXT : Side project</h3>
+        </div>
       </div>
       <div class="subheader__desc desc">
         <p class="desc__text"> I developed a clone of Pac-Man using only Javascript and CSS. This project furthered my
           object oriented programming and debugging skills.
         </p>
         <div class="desc__buttons">
-          <a href=""><div class="buttons__button">Play game</div></a>
-          <a href=""><div class="buttons__buttonCode">&lang;view code&rang;</div></a>
+          <a target="_blank" href="https://g-traub.github.io/pacman/"><div class="buttons__button">Play game</div></a>
+          <a target="_blank" href="https://github.com/g-traub/pacman"><div class="buttons__buttonCode">&lang;view code&rang;</div></a>
         </div>
       </div>
     </div>
-    <nav class="header__nav nav">
-      <a href="umr.html">
-        <div class="nav__pre">Prev</div>
-      </a>
-      <a href="mortymaze.html">
-        <div class="nav__nex">Next</div>
-      </a>
-    </nav>
   </header>
+  <nav class="header__nav nav">
+    <a href="umr.html">
+      <div class="nav__pre">Prev</div>
+    </a>
+    <a href="mortymaze.html">
+      <div class="nav__nex">Next</div>
+    </a>
+  </nav>
+  <main class="project__main pacman">
+    <section class="main__part">
+      <h2 class="part__title">Movement & animation</h2>
+      <div class="part__content">
+        <div class="content_texts">
+          <p class="texts__text">I used a 28 x 30 grid to create the board.<br>
+          I used a <strong>two-dimensionnal array</strong> to translate the positions of the walls, dots, ghosts and pac-man.<br>
+          This enabled me to <strong>test where characters could go.</strong></p>
+          <img src="../assets/img/board.png" alt="" class="texts__snippet">
+          <img src="../assets/img/grid.png" alt="" class="texts__snippet">
+          <p class="texts__text">I created a animation function that gets called by a <strong>requestAnimationFrame()</strong>, that <strong>translates the character in the right direction by x percents</strong>(I used x to change the speed). </p>
+          <video  autoplay loop class="content__video">
+            <source src="../assets/video/move.mov"
+            type="video/mp4">
+            Your browser doesn't support video.
+          </video>
+          <p class="texts__text">Everytime the translation is at/over 100% <strong>a move() function is called that deletes the character from its tile and appends it to the next one.</strong></p>
+        </div>
+      </div>
+    </section>
+    <section class="main__part">
+        <h2 class="part__title">Object oriented programming</h2>
+        <div class="part__content">
+          <div class="content_texts">
+            <p class="texts__text">All the characters where calling the same move() and animation() functions, so they were interupting each other.<br>
+            To solve this issue, I re-wrote the program in OOP, using the ES2015 “class” syntax. It saved me lines of code by creating a Character class which the other classes extand and also made it easier to add different speeds, states...</p>
+            <img src="../assets/img/pacman.png" alt="" class="texts__img">
+            <img src="../assets/img/classPacman.png" alt="" class="texts__snippet">
+            <img src="../assets/img/ghosts.png" alt="" class="texts__img">
+            <img src="../assets/img/classGhost.png" alt="" class="texts__snippet">
+            
+          </div>
+        </div>
+      </section>
+  </main>
 </body>
 
 </html>

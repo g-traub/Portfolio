@@ -2,17 +2,17 @@
   svg{
   width: 35px;
   height: auto;
-  margin: .8rem;
+  margin: 1.4rem .8rem .8rem .8rem;
   }
 }
 
 .project__header{
   display: flex;
-  position: relative;
 }
 .header__subheader{
   margin: 1rem;
   font-family: 'Mont';
+  width: 100%;
 }
 .subheader__titles{
   display: flex;
@@ -63,7 +63,6 @@
 .header__nav{
   display: flex;
   justify-content: space-between;
-  position: -webkit-sticky;
   position: sticky;
   top:0;
   background: #fff;
@@ -76,10 +75,10 @@
     top: 0;
     background: $gradient3;
   }
- /*  &::after{
+  /* &::after{
     content: ' ';
     width: 100vw;
-    height:2px;
+    height:1px;
     display: block;
     position: absolute;
     bottom: 0;
@@ -99,12 +98,10 @@
 .project__main{
  @include flexcenter();
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 1rem;
 }
 .main__part{
-  margin: 0 0 4rem 0;
+  margin: 0 0 3rem 0;
 }
 .main__part--last{
   margin-bottom: 2rem;
@@ -132,9 +129,10 @@
   line-height: 1.5;
   font-weight: normal;
   font-style: italic;
-  margin: 2rem;
+  margin: 1rem 2rem;
 }
 .content__video{
+  display: block;
   max-height: 300px;
   max-width: 90vw;
   object-fit: cover;
@@ -150,14 +148,22 @@
 }
 .texts__snippet{
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 90vw;
   width: 450px;
   @media (min-width: 950px){
   margin: 0 2rem 2rem 2rem;
   }
 }
+.texts__img{
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+}
 .content__texts{
   display: flex;
   flex-direction: column;
+}
+.pacman .content__video{
+  margin: 0 auto;
 }
