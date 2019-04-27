@@ -76,6 +76,15 @@
     top: 0;
     background: $gradient3;
   }
+ /*  &::after{
+    content: ' ';
+    width: 100vw;
+    height:2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: rgb(233, 233, 233);
+  } */
 }
 .nav__pre, .nav__nex{
   background-color: #000;
@@ -95,7 +104,10 @@
   margin-top: 1rem;
 }
 .main__part{
-  margin: 0 0 2rem 0;
+  margin: 0 0 4rem 0;
+}
+.main__part--last{
+  margin-bottom: 2rem;
 }
 .main__inWindow{
   width: 1200px;
@@ -109,7 +121,11 @@
 .part__content{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  @media (min-width: 950px){
+    flex-direction: row;
+    margin: 0 2rem;
+  }
 }
 .texts__text, .content__text{
   font-family: "Galaxie Polaris";
@@ -119,8 +135,6 @@
   margin: 2rem;
 }
 .content__video{
-  /* max-width: 50vw;
-  min-width: 400px;*/
   max-height: 300px;
   max-width: 90vw;
   object-fit: cover;
@@ -128,11 +142,20 @@
   border-radius: 5px;
   margin: 2rem auto; 
   order: -1;
+  @media (min-width: 950px){
+    order: 0;
+    max-width: 50vw;
+    max-height: 350px;
+  }
 }
 .texts__snippet{
+  display: block;
+  margin: 0 auto;
   max-width: 90vw;
   width: 450px;
+  @media (min-width: 950px){
   margin: 0 2rem 2rem 2rem;
+  }
 }
 .content__texts{
   display: flex;
