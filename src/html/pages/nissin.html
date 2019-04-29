@@ -11,31 +11,34 @@
 </head>
 
 <body>
-  <div class="returnArrow">
-    <!-- svg -->
-    <a href="../index.html#projects">
-      <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M11.032 -0.000488281L0 11.0315L2.6169 13.6484L2.60977 13.6555L10.5004 21.5461L13.4963 18.5502L8.01857 13.0725L26.9101 13.0725V8.83566L8.18764 8.83566L14.0279 2.99541L11.032 -0.000488281Z"
-          fill="url(#paint0_linear)" />
-        <defs>
-          <linearGradient id="paint0_linear" x1="-3.61355e-07" y1="1.09839" x2="13.2514" y2="24.8494"
-            gradientUnits="userSpaceOnUse">
-            <stop stop-color="#009FFF" />
-            <stop offset="0.463" stop-color="#40025F" />
-            <stop offset="1" stop-color="#EC2F4B" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </a>
-  </div>
   <header class="project__header header">
+    <div class="returnArrow">
+      <a href="../index.html#projects">
+        <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.032 -0.000488281L0 11.0315L2.6169 13.6484L2.60977 13.6555L10.5004 21.5461L13.4963 18.5502L8.01857 13.0725L26.9101 13.0725V8.83566L8.18764 8.83566L14.0279 2.99541L11.032 -0.000488281Z"
+            fill="url(#paint0_linear)" />
+          <defs>
+            <linearGradient id="paint0_linear" x1="-3.61355e-07" y1="1.09839" x2="13.2514" y2="24.8494"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#009FFF" />
+              <stop offset="0.463" stop-color="#40025F" />
+              <stop offset="1" stop-color="#EC2F4B" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+    </div>
     <div class="header__subheader subheader">
       <div class="subheader__titles titles">
-        <h1 class="titles__mainTitle">Nissin</h1>
-        <h2 class="titles__subTitle">HTML, CSS</h2>
-        <h3 class="titles__role">ROLE : Frontend developer</h3>
-        <h3 class="titles__context">CONTEXT : School project</h3>
+        <div class="titles__part">
+          <h1 class="titles__mainTitle">Nissin</h1>
+          <h2 class="titles__subTitle">HTML, CSS</h2>
+        </div>
+        <div class="titles__part">
+          <h3 class="titles__role">ROLE : Frontend developer</h3>
+          <h3 class="titles__context">CONTEXT : School project</h3>
+        </div>
       </div>
       <div class="subheader__desc desc">
         <p class="desc__text">In three days, in a team of 5, we designed a website to showcase 3 products of a brand. In
@@ -47,16 +50,66 @@
           </div>
       </div>
     </div>
-    <nav class="header__nav nav">
-      <a href="mortymaze.html">
-        <div class="nav__pre">Prev</div>
-      </a>
-      <h2 class="nav__title">nissin</h2>
-      <a href="socomptoir.html">
-        <div class="nav__nex">Next</div>
-      </a>
-    </nav>
   </header>
+  <nav class="header__nav nav">
+    <a href="mortymaze.html">
+      <div class="nav__pre">Prev</div>
+    </a>
+    <h2 class="nav__title">nissin</h2>
+    <a href="socomptoir.html">
+      <div class="nav__nex">Next</div>
+    </a>
+  </nav>
+  <main class="project__main pacman">
+    <section class="main__part">
+      <h2 class="part__title">Responsive</h2>
+      <div class="part__content">
+        <video  autoplay loop class="content__video">
+          <source src="../assets/video/responsive1.mov"
+          type="video/mp4">
+          Your browser doesn't support video.
+        </video>
+        <p class="texts__text">I used <strong>media queries</strong> to make the content fit best the viewport size.</p>
+      </div>
+      <div class="part__content">
+        <video  autoplay loop class="content__video">
+          <source src="../assets/video/responsive2.mov"
+          type="video/mp4">
+          Your browser doesn't support video.
+        </video>
+        <p class="texts__text">The menu <strong>changes from a bottom burger menu to a top bar menu</strong>, from mobile to desktop sizes.</p>
+      </div>
+      <div class="part__content">
+        <video  autoplay loop class="content__video">
+          <source src="../assets/video/responsive3.mov"
+          type="video/mp4">
+          Your browser doesn't support video.
+        </video>
+        <p class="texts__text">Background images are added as the width changes to give to user the feeling that <strong>any size is the right size to view the website.</strong></p>
+      </div>
+    </section>
+    <section class="main__part">
+      <h2 class="part__title">Performance</h2>
+      <div class="part__content">
+        <img src="../assets/img/perf.png" alt="" class="texts__snippet">
+        <p class="texts__text">Performance is important and often left out. Espacially when working with images and videos, if you don't have it in mind you can end up with a bloated and slow website. </strong></p>
+      </div>
+      <div class="part__content">
+        <img src="../assets/img/picture3.png" alt="" class="texts__snippet">
+          <p class="texts__text">I used WebP, srcset, and lazy loading.</p>
+          <p class="texts__text">If the browser can display WebP images it will, instead of the PNG (which is larger).</p>
+          <p class="texts__text">Srcset enables the browser to open a different images depending on the viewport width. This avoids loading unnecessarily large images.</p>
+          <p class="texts__text">Lazy loading allows the page to load images which are not visible by the user  asynchronously and thus not blocking the rendering of the page.</p>
+      </div>
+    </section>
+    <section class="main__part">
+      <h2 class="part__title">BEM</h2>
+      <div class="part__content">
+        <img src="../assets/img/CSS1.png" alt="" class="texts__snippet">
+        <p class="texts__text">BEM is a naming convention for CSS, it makes for <strong>more maintable code through clear naming, flater specificity and more modular code.</strong></p>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

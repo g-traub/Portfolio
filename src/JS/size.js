@@ -13,5 +13,5 @@ const size = () => {
     replacement.classList.add('displayed');
   }
 }
-
+size();
 window.onresize = size;
