@@ -1,0 +1,17 @@
+const iframe = document.querySelector('iframe');
+const replacement = document.querySelector('.replacement');
+
+const size = () => {
+  let width = window.innerWidth;
+  console.log(width);
+  if (width>1200){
+    replacement.classList.remove('displayed');
+    iframe.classList.add('displayed');
+  }
+  else {
+    iframe.classList.remove('displayed')
+    replacement.classList.add('displayed');
+  }
+}
+
+window.onresize = size;

@@ -115,6 +115,7 @@
   width: 1200px;
   height: 700px;
   margin: 2rem;
+  display: none;
 }
 .part__title{
   text-align: right;
@@ -198,4 +199,12 @@
   .nav__title{
     opacity: 1;
   }
+}
+.replacement{
+  text-align: center;
+  margin: 2rem;
+  line-height: 1.4;
+}
+.displayed{
+  display: block;
 }
