@@ -63,6 +63,7 @@
 .header__nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top:0;
   background: #fff;
@@ -84,6 +85,10 @@
     bottom: 0;
     background: rgb(233, 233, 233);
   } */
+}
+.nav__title{
+  opacity: 0;
+  transition: opacity 0.4s;
 }
 .nav__pre, .nav__nex{
   background-color: #000;
@@ -178,4 +183,19 @@
 }
 .pacman .content__video{
   margin: 0 auto;
+}
+
+.reached{
+  &::after{
+  content: ' ';
+  width: 100vw;
+  height:1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background: rgb(233, 233, 233);
+  }
+  .nav__title{
+    opacity: 1;
+  }
 }
