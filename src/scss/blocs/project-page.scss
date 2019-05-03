@@ -98,6 +98,7 @@
 }
 .main__part{
   margin: 0 0 3rem 0;
+  width: 100%;
 }
 .nissin{
   .part__content{
@@ -240,4 +241,26 @@
 }
 .displayed{
   display: block;
+}
+.content--borneMockup{
+  width:100%;
+  z-index: -1;
+  position: relative;
+  margin: 2rem auto;
+  .borne{
+    display: block;
+    height: 516px;
+    width: 265.5px;
+    margin: 0 auto;
+  }
+  .content__video{
+    display: block;
+    position: absolute;
+    top: 24px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    border: initial;
+    width: 162.05px;
+  }
 }
