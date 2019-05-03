@@ -45,8 +45,8 @@
           addition to theses 3 pages, we added a homepage and 2 article pages. We integrated the mockup and delivered a
           fully functional and responsive website.</p>
           <div class="desc__buttons">
-            <a href=""><div class="buttons__button">Visit website</div></a>
-            <a href=""><div class="buttons__buttonCode">&lang;view code&rang;</div></a>
+            <a target="_blank" rel="noopener" href="https://pedantic-hodgkin-e11393.netlify.com/"><div class="buttons__button">Visit website</div></a>
+            <a target="_blank" rel="noopener"  href="https://github.com/g-traub/hetic-w1p2021-20-calcium"><div class="buttons__buttonCode">&lang;view code&rang;</div></a>
           </div>
       </div>
     </div>
@@ -60,49 +60,56 @@
       <div class="nav__nex">Next</div>
     </a>
   </nav>
-  <main class="project__main pacman">
+  <main class="project__main nissin">
     <section class="main__part">
       <h2 class="part__title">Responsive</h2>
+      <div class="part--split">
       <div class="part__content">
-        <video  autoplay loop class="content__video">
-          <source src="../assets/video/responsive1.mov"
-          type="video/mp4">
-          Your browser doesn't support video.
-        </video>
-        <p class="texts__text">I used <strong>media queries</strong> to make the content fit best the viewport size.</p>
+          <video  autoplay loop class="content__video">
+            <source src="../assets/video/responsive1.mov"
+            type="video/mp4">
+            Your browser doesn't support video.
+          </video>
+          <p class="texts__text">I used <strong>media queries</strong> to make the content fit best the viewport size.</p>
+        </div>
+        <div class="part__content">
+          <video  autoplay loop class="content__video">
+            <source src="../assets/video/responsive2.mov"
+            type="video/mp4">
+            Your browser doesn't support video.
+          </video>
+          <p class="texts__text">The menu <strong>changes from a bottom burger menu to a top bar menu</strong>, from mobile to desktop sizes.</p>
+        </div>
+        <div class="part__content">
+          <video  autoplay loop class="content__video">
+            <source src="../assets/video/responsive3.mov"
+            type="video/mp4">
+            Your browser doesn't support video.
+          </video>
+          <p class="texts__text">Background images are added as the width changes to give to user the feeling that <strong>any size is the right size to view the website.</strong></p>
+        </div>
       </div>
-      <div class="part__content">
-        <video  autoplay loop class="content__video">
-          <source src="../assets/video/responsive2.mov"
-          type="video/mp4">
-          Your browser doesn't support video.
-        </video>
-        <p class="texts__text">The menu <strong>changes from a bottom burger menu to a top bar menu</strong>, from mobile to desktop sizes.</p>
-      </div>
-      <div class="part__content">
-        <video  autoplay loop class="content__video">
-          <source src="../assets/video/responsive3.mov"
-          type="video/mp4">
-          Your browser doesn't support video.
-        </video>
-        <p class="texts__text">Background images are added as the width changes to give to user the feeling that <strong>any size is the right size to view the website.</strong></p>
-      </div>
+      
     </section>
     <section class="main__part">
       <h2 class="part__title">Performance</h2>
-      <div class="part__content">
-        <img src="../assets/img/perf.png" alt="" class="texts__snippet">
-        <p class="texts__text">Performance is important and often left out. Espacially when working with images and videos, if you don't have it in mind you can end up with a bloated and slow website. </strong></p>
+      <div class="part__content part__content--first">
+        <img src="../assets/img/perf.png" alt="" class="texts__snippet texts__snippet--perf">
+        <div class="content__texts">
+          <p class="texts__text">Performance is important and often left out. Espacially when working with images and videos, if you don't have it in mind you can end up with a bloated and slow website. </strong></p>
+        </div>
       </div>
       <div class="part__content">
         <img src="../assets/img/picture3.png" alt="" class="texts__snippet">
-          <p class="texts__text">I used WebP, srcset, and lazy loading.</p>
+        <div class="content__texts">
+          <p class="texts__text"><strong>I used WebP, srcset, and lazy loading.</strong></p>
           <p class="texts__text">If the browser can display WebP images it will, instead of the PNG (which is larger).</p>
           <p class="texts__text">Srcset enables the browser to open a different images depending on the viewport width. This avoids loading unnecessarily large images.</p>
           <p class="texts__text">Lazy loading allows the page to load images which are not visible by the user  asynchronously and thus not blocking the rendering of the page.</p>
+        </div>
       </div>
     </section>
-    <section class="main__part">
+    <section class="main__part main__part--last">
       <h2 class="part__title">BEM</h2>
       <div class="part__content">
         <img src="../assets/img/CSS1.png" alt="" class="texts__snippet">
