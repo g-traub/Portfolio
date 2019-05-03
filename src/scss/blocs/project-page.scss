@@ -264,3 +264,36 @@
     width: 162.05px;
   }
 }
+
+.alfred{
+  .content__video{
+    border: initial;
+  }
+  .texts__text{
+    @media(min-width: 950px){
+      width: 35vw;
+    }
+  }
+  .texts__snippet{
+    @media(min-width: 950px){
+      width: 35vw;
+      height: 100%;
+      margin: 1rem;
+    }
+  }
+}
+.socomptoir{
+  .content__video{
+    border: initial;
+  }
+}
+
+.content__svg{
+  fill: url(#linear-gradient) #000;
+  width: 25vw;
+}
+.content__svg--last{
+  fill: url(#linear-gradient) #000;
+  width: 90vw;
+  margin: 2rem auto 0 auto;
+}
