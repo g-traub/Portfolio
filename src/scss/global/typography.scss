@@ -1,11 +1,11 @@
 body{
-  font-family: 'Minimal Mono';
+  font-family: 'Minimal Mono', monospace;
   font-size: 16px;
 }
 
 
 h1,h2{
-  font-family: 'Galaxie Polaris';
+  font-family: 'Galaxie Polaris', Helvetica, sans-serif;
 }
 
 h1 {
@@ -34,33 +34,33 @@ span{
 .page1__subheader {
   h2{
     font-size: 30px;
-    font-family: 'Mont';
+    font-family: 'Mont', Helvetica, sans-serif;
   }
   span {
-    font-family: 'Galaxie Polaris';
+    font-family: 'Galaxie Polaris', Helvetica, sans-serif;
     font-size: 20px;
   }
 }
 
 .projects{
 span {
-  font-family: 'Galaxie Polaris';
+  font-family: 'Galaxie Polaris',Helvetica, sans-serif;
   font-style: normal;
 }
 .project__menu{
-  font-family: 'Mont';
+  font-family: 'Mont',Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 }
 
 .slider h1 {
-font-family: 'Mont';
+font-family: 'Mont',Helvetica, sans-serif;
 font-weight: 900;
 font-style: italic;
 }
 
 .part__title{
-  font-family: 'Mont';
+  font-family: 'Mont',Helvetica, sans-serif;
   font-size: 1.4rem;
 }

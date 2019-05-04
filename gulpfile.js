@@ -44,8 +44,8 @@ function css() {
 }
 
 function js() {
-  return src('./src/js/*.js')
-  .pipe(dest('dist/js'))
+  return src('./src/JS/*.js')
+  .pipe(dest('dist/JS'))
 }
 
 function assets() {

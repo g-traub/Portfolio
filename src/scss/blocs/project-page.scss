@@ -16,7 +16,7 @@
 }
 .header__subheader{
   margin: 1rem;
-  font-family: 'Minimal Mono';
+  font-family: 'Minimal Mono', monospace;
   width: 100%;
 }
 .subheader__titles{
@@ -35,17 +35,17 @@
   padding: 1rem 1.8rem 0 .3rem;
   display: inline-block;
   margin-bottom: .5rem;
-  font-family: 'Mont';
+  font-family: 'Mont',Helvetica, sans-serif;
 }
 .desc__text {
   font-size: 1.1em;
-  font-family: "Galaxie Polaris";
+  font-family: "Galaxie Polaris",Helvetica, sans-serif;
   line-height: 1.3;
   margin: .5rem 1rem 1rem 0;
 }
 .desc__buttons
 .buttons__button{
-  font-family: "Galaxie Polaris";
+  font-family: "Galaxie Polaris",Helvetica, sans-serif;
   display: inline-block;
   padding: .5rem 1.8rem;
   border: 1px solid #000;
@@ -54,7 +54,7 @@
 .buttons__buttonCode{
   display: inline-block;
   margin: 1rem;
-  font-family: 'Minimal Mono';
+  font-family: 'Minimal Mono',monospace;
   transition: transform 0.2s;
 }
 .buttons__buttonCode:hover{
@@ -88,7 +88,7 @@
 .nav__pre, .nav__nex{
   background-color: #000;
   color: #fff;
-  font-family: 'Mont';
+  font-family: 'Mont',Helvetica, sans-serif;
   padding: .2rem .5rem;
   font-weight: 900;
   font-style: italic;
@@ -168,7 +168,7 @@
   }
 }
 .texts__text, .content__text{
-  font-family: "Galaxie Polaris";
+  font-family: "Galaxie Polaris",Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: normal;
   font-style: italic;

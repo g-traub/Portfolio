@@ -9,7 +9,7 @@
   }
   .content h2{
     font-size: 1.2rem;
-    font-family: 'Minimal Mono';
+    font-family: 'Minimal Mono', monospace;
     font-style: normal;
     font-weight: normal;
     &::after{
@@ -17,7 +17,7 @@
     }
   }
   h3 {
-    font-family: 'Galaxie Polaris';
+    font-family: 'Galaxie Polaris',Helvetica, sans-serif;
     font-style: italic;
     font-weight: normal;
     font-size: .9rem;
