@@ -8,14 +8,6 @@
 
 @font-face {
   font-family: 'Galaxie Polaris';
-  src: url('../assets/fonts/GalaxiePolaris-Bold.woff2') format('woff2'),
-      url('../assets/fonts/GalaxiePolaris-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Galaxie Polaris';
   src: url('../assets/fonts/GalaxiePolaris-HeavyItalic.woff2') format('woff2'),
       url('../assets/fonts/GalaxiePolaris-HeavyItalic.woff') format('woff');
   font-weight: 900;
@@ -30,6 +22,15 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Galaxie Polaris';
+  src: url('../assets/fonts/GalaxiePolaris-Book.woff2') format('woff2'),
+      url('../assets/fonts/GalaxiePolaris-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 @font-face {
   font-family: 'Mont';
@@ -37,14 +38,6 @@
   url('../assets/fonts/Mont-BlackItalic.woff') format('woff');
   font-weight: 900;
   font-style: italic;
-}
-
-@font-face {
-  font-family: 'Mont';
-  src: url('../assets/fonts/Mont-Light.woff2') format('woff2'),
-  url('../assets/fonts/Mont-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
 }
 
 @font-face {
