@@ -109,6 +109,7 @@ let canMove = true;
 let position = 0;
 slider.appendChild(slides[0].cloneNode(true));
 const slideCount = slides.length+1;
+dots[position].classList.add('active');
 /* let percentage = 0; */
 
 for (let i=0 ; i<slides.length ; i++){
@@ -136,8 +137,6 @@ for (let i=0 ; i<slides.length ; i++){
           window.location.hash = `#${idPrev}`; */
           break;
       }
-      console.log(slideCount);
-      console.log(position);
     }
     /*   slider.style.transform = `translateX(${percentage}vw)`; */
     else{
@@ -171,15 +170,17 @@ function previous() {
 }
   
 function moveTo(newPosition, jump) {
+  dots[position] ? dots[position].classList.remove('active') : dots[0].classList.remove('active');
   if (!jump) { // Block the navigation for the duration of the transition (except when juming)
     canMove = false;
     setTimeout(function() {
       canMove = true;
     }, 300);
   }
-  
   position = newPosition; // Update the position
   slider.style.transform = 'translateX(' + position * -100 + 'vw)'; // Update the style
+  console.log(position);
+  dots[position] ? dots[position].classList.add('active') : dots[0].classList.add('active');
 };
 
 function jumpTo(newPosition, callback) {
