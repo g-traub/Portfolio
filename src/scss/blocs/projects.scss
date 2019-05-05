@@ -102,7 +102,8 @@
     }
     
   }
-  span:not(.projects__menu){
+  .projects__dot{
+    cursor: pointer;
     display: inline-block;
     border: 2px solid #000;
     border-radius: 50%;
@@ -178,8 +179,8 @@
 }
 
 .active {
-  span{
-    background-color: #000;
+  &.projects__dot{
+    background-color: #000 !important;
   }
   @media (min-width:1000px){
     .button{

@@ -179,7 +179,6 @@ function moveTo(newPosition, jump) {
   }
   position = newPosition; // Update the position
   slider.style.transform = 'translateX(' + position * -100 + 'vw)'; // Update the style
-  console.log(position);
   dots[position] ? dots[position].classList.add('active') : dots[0].classList.add('active');
 };
 
@@ -196,4 +195,11 @@ function jumpTo(newPosition, callback) {
       }
     });
   });
+}
+
+//dots links
+for(let dot of dots){
+  dot.addEventListener('click', e => {
+    moveTo(e.target.id);
+  })
 }
