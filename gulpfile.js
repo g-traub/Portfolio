@@ -6,6 +6,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const gulpif = require('gulp-if');
 const pxtorem = require('gulp-pxtorem');
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync');
 const del = require('del');
 
@@ -28,7 +30,7 @@ function serve(done) {
 }
 
 function html(){
-  return src(['./src/html/*.html', './src/html/pages/*.html'], {base: './src/html/'})
+  return src(['./src/html/*.html', './src/html/projects/*.html'], {base: './src/html/'})
   .pipe(dest('dist/'))
 }
 
@@ -43,9 +45,23 @@ function css() {
   .pipe(dest('dist/css'))
 }
 
-function js() {
-  return src('./src/JS/*.js')
-  .pipe(dest('dist/JS'))
+function mainjs() {
+  return src(['./src/JS/lib/*.js','./src/JS/main.js'])
+  .pipe(concat('all.js'))
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(uglify())
+  .pipe(dest('dist/js'))
+}
+function otherjs() {
+  return src(['./src/JS/project.js','./src/JS/size.js'])
+  .pipe(concat('project.js'))
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(uglify())
+  .pipe(dest('dist/js'))
 }
 
 function assets() {
@@ -53,7 +69,7 @@ function assets() {
   .pipe(dest('dist/assets'))
 }
 
-const watcher = () => watch('src/**/*.*', series(html, css, js, reload));
+const watcher = () => watch('src/**/*.*', series(html, css, mainjs, otherjs, reload));
 
-exports.dev = series(clean, html, css, js, assets, serve, watcher);
-exports.build = series(html, css, js, assets);
+exports.dev = series(clean, html, css, mainjs, otherjs, assets, serve, watcher);
+exports.build = series(html, css, mainjs, otherjs, assets);
