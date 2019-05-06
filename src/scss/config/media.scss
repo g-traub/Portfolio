@@ -12,8 +12,9 @@
   height: 50vh;
   max-width: 600px;
   max-height: 360px;
+  min-height: 230px;
   @media (min-width:1000px){
-    height: 50vh;
+    height: 60vh;
     max-height: 800px;
   }
   svg{
