@@ -11,11 +11,16 @@ const html = document.querySelector('html');
 //desktop menu images
 const images = document.querySelectorAll('.slide .slide__image');
 console.log(images);
+let titleEl = document.querySelector('.active');
 
 for (let button of buttons){
   button.addEventListener('click', e => {
     let visibleEl = document.querySelector('.visible');
     visibleEl.classList.remove('visible');
+    titleEl.classList.remove('active');
+    let button = buttons[e.currentTarget.id];
+    button.classList.add('active');
+    titleEl = button;
     let image = images[e.currentTarget.id];
     image.classList.add('visible');
   })

@@ -192,7 +192,7 @@
     background-color: #000 !important;
   }
   @media (min-width:1000px){
-    .button{
+    &.button{
       color: #fff;
       &::after, &:hover::after{
         animation: .2s forwards activer linear;
