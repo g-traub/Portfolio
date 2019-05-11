@@ -10,7 +10,6 @@ const html = document.querySelector('html');
 
 //desktop menu images
 const images = document.querySelectorAll('.slide .slide__image');
-console.log(images);
 let titleEl = document.querySelector('.active');
 
 for (let button of buttons){
@@ -65,11 +64,9 @@ for (let i=0 ; i<slides.length ; i++){
     if (e.type != 'tap'){      
       switch (e.direction){
         case 2 : 
-          console.log('left');
           next();
           break;
         case 4 :
-          console.log('right');
           previous();
           break;
       }

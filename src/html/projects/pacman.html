@@ -70,11 +70,11 @@
             <p class="texts__text">I used a 28 x 30 grid to create the board.<br>
             I used a <strong>two-dimensionnal array</strong> to translate the positions of the walls, dots, ghosts and pac-man.<br>
             This enabled me to <strong>test where characters could go.</strong></p>
-            <img src="../assets/img/grid.png" alt="" class="texts__snippet">
-            <img src="../assets/img/board.png" alt="" class="texts__snippet texts__snippet--aside">
+            <img class="lazy texts__snippet" src="../assets/img/lazy/grid.png" data-src="../assets/img/grid.png" alt="grid">
+            <img class="lazy texts__snippet texts__snippet--aside" src="../assets/img/lazy/board.png" data-src="../assets/img/board.png" alt="game board">
           </div>
           <p class="texts__text">I created an animation function that gets called by a <strong>requestAnimationFrame()</strong>, that <strong>translates the character in the right direction by x percent</strong>(I used x to change the speed). </p>
-          <video  autoplay loop class="content__video">
+          <video class="lazy content__video" autoplay loop>
             <source src="../assets/video/move.mov"
             type="video/mp4">
             Your browser doesn't support video.
@@ -91,12 +91,12 @@
             To solve this issue, I re-wrote the program in OOP, using the ES2015 “class” syntax. It saved me lines of code by creating a Character class which the other classes extend and also made it easier to add different speeds, states...</p>
             <div class="texts__part">
               <div>
-                <img src="../assets/img/pacman.png" alt="" class="texts__img">
-                <img src="../assets/img/classPacman.png" alt="" class="texts__snippet">
+                <img class="lazy texts__img" src="../assets/img/lazy/pacman.png" data-src="../assets/img/pacman.png" alt="pacman">
+                <img class="lazy texts__snippet" src="../assets/img/lazy/classPacman.png" data-src="../assets/img/classPacman.png" alt="class pacman code snippet">
               </div>
               <div>
-                <img src="../assets/img/ghosts.png" alt="" class="texts__img">
-                <img src="../assets/img/classGhost.png" alt="" class="texts__snippet">
+                <img class="lazy texts__img" src="../assets/img/lazy/ghosts.png" data-src="../assets/img/ghosts.png" alt="ghosts">
+                <img class="lazy texts__snippet" src="../assets/img/lazy/classGhost.png" data-src="../assets/img/classGhost.png" alt="class ghost code snippet">
               </div>
             </div>
           </div>

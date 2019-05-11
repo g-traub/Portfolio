@@ -3,7 +3,6 @@ const replacement = document.querySelector('.replacement');
 
 const size = () => {
   let width = window.innerWidth;
-  console.log(width);
   if (width>1200){
     replacement.classList.remove('displayed');
     iframe.classList.add('displayed');

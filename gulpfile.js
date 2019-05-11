@@ -46,7 +46,7 @@ function css() {
 }
 
 function mainjs() {
-  return src(['./src/JS/lib/*.js','./src/JS/main.js'])
+  return src(['./src/JS/lib/hammer.min.js','./src/JS/main.js'])
   .pipe(concat('all.js'))
   .pipe(babel({
     presets: ['@babel/env']
@@ -55,8 +55,16 @@ function mainjs() {
   .pipe(dest('dist/js'))
 }
 function otherjs() {
-  return src(['./src/JS/project.js','./src/JS/size.js'])
+  return src(['./src/JS/lib/yall.min.js','./src/JS/project.js'])
   .pipe(concat('project.js'))
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(uglify())
+  .pipe(dest('dist/js'))
+}
+function sizejs(){
+  return src('./src/JS/size.js')
   .pipe(babel({
     presets: ['@babel/env']
   }))
@@ -65,11 +73,11 @@ function otherjs() {
 }
 
 function assets() {
-  return src(['./src/assets/fonts/*.*', './src/assets/img/*.*', './src/assets/video/*.*'], {base: './src/assets/'})
+  return src(['./src/assets/fonts/**', './src/assets/img/**', './src/assets/video/**'], {base: './src/assets/'})
   .pipe(dest('dist/assets'))
 }
 
-const watcher = () => watch('src/**/*.*', series(html, css, mainjs, otherjs, reload));
+const watcher = () => watch('src/**/*.*', series(html, css, mainjs, otherjs, sizejs, reload));
 
-exports.dev = series(clean, html, css, mainjs, otherjs, assets, serve, watcher);
-exports.build = series(html, css, mainjs, otherjs, assets);
+exports.dev = series(clean, html, css, mainjs, otherjs, sizejs, assets, serve, watcher);
+exports.build = series(html, css, mainjs, otherjs, sizejs, assets);

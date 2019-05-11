@@ -58,9 +58,9 @@
       <div class="part__content">
         <div class="content_texts">
           <p class="texts__text">I used CSS property <strong>clip-path</strong> to create <strong>masks</strong> over the different parts of the shoe. Then with JavaScript, we <strong>apply a change on the background of the mask when a color or texture is used.</strong></p>
-          <img src="../assets/img/masks.png" alt="" class="texts__snippet">
+          <img class="lazy texts__snippet" src="../assets/img/lazy/masks.png" data-src="../assets/img/masks.png"alt="css masks code snippet">
         </div>
-        <video  autoplay loop class="content__video">
+        <video class="lazy content__video" autoplay loop>
           <source src="../assets/video/masks.mov"
           type="video/mp4">
           Your browser doesn't support video.
@@ -73,9 +73,9 @@
         <div class="content_texts">
         <p class="texts__text">To be able to add a picture of a fabric, I used a &lang;input type="file"&rang;, that accepts png, and jpeg. 
           With JavaScript I <strong>displayed the image as a background and saved its local path as a dataset in HTML.</strong> Then I reused the path to display the texture on the shoe. </p>
-        <img src="../assets/img/input.png" alt="" class="texts__snippet">
+        <img class="lazy texts__snippet" src="../assets/img/lazy/input.png" data-src="../assets/img/input.png"alt="files input code snippet">
         </div>
-        <video  autoplay loop class="content__video">
+        <video class="lazy content__video" autoplay loop>
           <source src="../assets/video/input.mov"
           type="video/mp4">
           Your browser doesn't support video.
@@ -87,7 +87,7 @@
       <div class="part__content">
         <p class="content__text">To take a picture with the webcam, I used <strong>WebRTC</strong> with <strong>a &lang;video&rang; and a &lang;canvas&rang;</strong> on top of each other. 
           The canvas I used to capture the picture and after the picture is taken, I <strong>close the video stream and save the image</strong> to use it as a texture.</p>
-        <video autoplay loop class="content__video">
+        <video class="lazy content__video" autoplay loop>
           <source src="../assets/video/photo.mov"
           type="video/mp4">
           Your browser doesn't support video.
