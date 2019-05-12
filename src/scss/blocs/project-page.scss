@@ -94,6 +94,15 @@
   font-style: italic;
   display: inline-block;
   margin:1rem;
+  .pre__txt, .nex__txt{
+    transition: transform .5s;
+  }
+}
+.nav__pre:hover .pre__txt{
+  transform: translateX(-50px);
+}
+.nav__nex:hover .nex__txt{
+  transform: translateX(50px);
 }
 .project__main{
  @include flexcenter();

@@ -52,9 +52,6 @@ body,html{
     fill: #fff;
     stroke: #000;
     transition: .3s fill;
-    &:hover{
-      fill: #000;
-    }
   }
   p{
     display:none;
