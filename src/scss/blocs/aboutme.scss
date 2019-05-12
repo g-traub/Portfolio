@@ -38,9 +38,14 @@
   content: ' ';
   display: block;
   height:.24em;
-  background: $gradient1;;
+  background: $gradient1;
 }
-
+.contact h2::after{
+  background-size: 200% 200%;
+}
+.contact:hover h2::after{
+  animation: Gradient 3s ease infinite;
+}
 .page3__title{
   font-size: 1.8rem;
   transform: rotate(-3deg) translateX(-5px);

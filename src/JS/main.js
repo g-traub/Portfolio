@@ -49,7 +49,6 @@ function closeMenu () {
 }
 
 //Slider manager
-
 let canMove = true;
 let position = 0;
 slider.appendChild(slides[0].cloneNode(true));
