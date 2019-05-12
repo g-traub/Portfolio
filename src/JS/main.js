@@ -7,21 +7,27 @@ const menuScreen = document.querySelector('.menuScreen');
 const menuCross = document.querySelector('.exit');
 const body = document.querySelector('body');
 const html = document.querySelector('html');
+let position = 0;
 
 //desktop menu images
 const images = document.querySelectorAll('.slide .slide__image');
 let titleEl = document.querySelector('.active');
 
+const activate = index => {
+  let visibleEl = document.querySelector('.visible');
+  visibleEl.classList.remove('visible');
+  titleEl.classList.remove('active');
+  let button = buttons[index];
+  button.classList.add('active');
+  titleEl = button;
+  let image = images[index];
+  image.classList.add('visible');
+  position = index;
+}
+
 for (let button of buttons){
   button.addEventListener('click', e => {
-    let visibleEl = document.querySelector('.visible');
-    visibleEl.classList.remove('visible');
-    titleEl.classList.remove('active');
-    let button = buttons[e.currentTarget.id];
-    button.classList.add('active');
-    titleEl = button;
-    let image = images[e.currentTarget.id];
-    image.classList.add('visible');
+    activate(e.currentTarget.id);
   })
 }
 
@@ -50,7 +56,7 @@ function closeMenu () {
 
 //Slider manager
 let canMove = true;
-let position = 0;
+
 slider.appendChild(slides[0].cloneNode(true));
 const secondAlf = document.querySelectorAll('.slider__alfred .slide__image')[1];
 secondAlf.classList.remove('visible');
@@ -60,7 +66,7 @@ dots[position].classList.add('active');
 for (let i=0 ; i<slides.length ; i++){
   const sliderHammer = new Hammer(slides[i]);
   sliderHammer.on('swiperight swipeleft tap', e => {
-    if (e.type != 'tap'){      
+    if (e.type != 'tap'){
       switch (e.direction){
         case 2 : 
           next();
@@ -134,3 +140,18 @@ for(let dot of dots){
     moveTo(e.target.id);
   })
 }
+
+//Resize 
+const resizingCheck = () => {
+  console.log('yes');
+    if(window.matchMedia("(min-width:1000px)").matches) {
+      console.log(position, typeof(position));
+      slider.style.transition = 'none';
+      slider.style.transform = 'none';
+      activate(parseInt(position));
+    }
+    else {
+      jumpTo(position); 
+    }
+}
+window.addEventListener('resize', resizingCheck);
