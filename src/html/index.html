@@ -14,6 +14,14 @@
 <body>
   <svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
     <defs>
+        <linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%" > 
+            <stop offset="0%" stop-color="#ec2f4b">
+                <animate attributeName="stop-color" values="#ec2f4b; #40025f; #ec2f4b" dur="4s" repeatCount="indefinite" ></animate>
+            </stop>
+            <stop offset="100%" stop-color="#40025f">
+                <animate attributeName="stop-color" values="#40025f; #009fff; #40025f" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+          </linearGradient>
       <linearGradient id="linear-gradient" x1="-0.106" y1="0.5" x2="0.753" y2="0.83" gradientUnits="objectBoundingBox">
         <stop offset="0" stop-color="#009fff" />
         <stop offset="0.567" stop-color="#40025f" />
@@ -494,14 +502,8 @@
             </svg>
           </a>
         </div>
-        <a href="mailto:guillaumetraub@gmail.com" class="contact">
+        <a href="mailto:guillaumetraub@gmail.com" class="contact" id="contact">
           <h2>Contact me</h2>
-          <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="21.66" height="17.328" viewBox="0 0 21.66 17.328">
-            <path id="Tracé_107" data-name="Tracé 107"
-              d="M1315.593,98.823h17.328a2.123,2.123,0,0,1,.885.192l-9.549,11.14-9.549-11.14a2.12,2.12,0,0,1,.885-.192Zm-2.166,15.162v-13c0-.046,0-.091,0-.136l6.351,7.409-6.281,6.282a2.128,2.128,0,0,1-.075-.559Zm19.494,2.166h-17.328a2.184,2.184,0,0,1-.56-.075l6.164-6.164,3.061,3.57,3.059-3.57,6.164,6.164a2.187,2.187,0,0,1-.56.075Zm2.166-2.166a2.186,2.186,0,0,1-.075.559l-6.282-6.282,6.351-7.409c0,.045.005.09.005.136v13Z"
-              transform="translate(-1313.427 -98.823)" fill="url(#linear-gradient)" />
-          </svg>
         </a>
       </div>
     </footer>

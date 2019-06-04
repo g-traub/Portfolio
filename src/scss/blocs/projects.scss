@@ -126,6 +126,10 @@
   .projects__menu{
     cursor: pointer;
     margin-left: 1rem;
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
     @media (min-width:1000px){
       display: none;
     }

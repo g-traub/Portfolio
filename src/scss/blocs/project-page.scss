@@ -50,6 +50,10 @@
   padding: .5rem 1.8rem;
   border: 1px solid #000;
   border-radius: 5px;
+  transition: transform 0.3s;
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 .buttons__buttonCode{
   display: inline-block;
@@ -58,7 +62,7 @@
   transition: transform 0.2s;
 }
 .buttons__buttonCode:hover{
-  transform: scale(1.01);
+  transform: scale(1.1);
 }
 .buttons__buttonCode--alone{
   padding-left: 0;
@@ -304,7 +308,6 @@
     width: 70vw;
     max-height: initial;
     max-width: initial;
-    z-index: -1;
     margin: 4% auto 0 auto;
   }
     .part__parts{
