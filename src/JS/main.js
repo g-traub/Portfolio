@@ -2,7 +2,9 @@ const slider = document.querySelector('.slider__container');
 const slides =  document.querySelectorAll('.slide');
 const buttons = document.querySelectorAll('.button');
 const dots = document.querySelectorAll('.projects__dot');
-const allNode = document.querySelector('.projects__menu');
+const allNode = document.querySelector('.circle__container');
+const circleNode = document.querySelector('.circle__all');
+
 const menuScreen = document.querySelector('.menuScreen');
 const menuCross = document.querySelector('.exit');
 const body = document.querySelector('body');
@@ -33,6 +35,8 @@ for (let button of buttons){
 
 //Menu and close menu
 allNode.addEventListener('click', () => {
+  console.log('clicked', circleNode);
+  circleNode.classList.add('full');
   menuScreen.classList.add('visible');
   body.classList.add('menu--open');
   html.classList.add('menu--open');
@@ -49,6 +53,7 @@ for(let item of menuItems){
 }
 
 function closeMenu () {
+  circleNode.classList.remove('full');
   menuScreen.classList.remove('visible');
   body.classList.remove('menu--open');
   html.classList.remove('menu--open');

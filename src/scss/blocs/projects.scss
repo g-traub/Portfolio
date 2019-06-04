@@ -1,5 +1,6 @@
 .visible{
   display: block !important;
+  animation: opacityappear .3s;
 }
 .menu--open{
   overflow: hidden;
@@ -43,6 +44,10 @@
     }
     .slide__image{
       margin: 1rem auto;
+      transition: transform 0.4s;
+      &:hover{
+        transform: scale(1.03);
+      }
     }
   }
 }
@@ -60,7 +65,7 @@
     display: inline-block;
     font-size: 2rem;
     font-family: 'Mont',Helvetica, sans-serif;
-    @media (min-width: 1000px){
+    @media (min-width: 1200px){
       font-size: 2.5rem;
     }
   }
@@ -87,7 +92,6 @@
   .button{
     display: none;
     position: relative;
-    
     @media (min-width:1000px){
       display: block;
       cursor: pointer;
@@ -125,13 +129,44 @@
   
   .projects__menu{
     cursor: pointer;
+    color: #000;
     margin-left: 1rem;
-    transition: all 0.3s;
-    &:hover{
-      transform: scale(1.1);
-    }
     @media (min-width:1000px){
       display: none;
+    }
+  }
+  .circle__container{
+    position: relative;
+    width: 50px;
+    &:hover {
+      .circle__all{
+        transform: scale(5);
+        opacity: 1;
+      }
+      .projects__menu{
+        color: #fff;
+        z-index: 1;
+      }
+    }
+  }
+  
+  .circle__all{
+    transition: all 0.4s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background: #000;
+    z-index: -1;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    display: block;
+    &.full{
+      transform: scale(200);
+      opacity: 1;
     }
   }
 }
@@ -143,7 +178,7 @@
   height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, .95);
-  z-index:2;
+  z-index:100;
   position: fixed;
   top:0;
   .exit{
