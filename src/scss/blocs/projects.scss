@@ -46,7 +46,7 @@
       margin: 1rem auto;
       transition: transform 0.4s;
       &:hover{
-        transform: scale(1.03);
+        transform: scale(1.01);
       }
     }
   }
@@ -165,8 +165,8 @@
     opacity: 0;
     display: block;
     &.full{
-      transform: scale(200);
-      opacity: 1;
+      transform: scale(200) !important;
+      opacity: 1 !important;
     }
   }
 }
