@@ -143,9 +143,11 @@ for(let dot of dots){
 
 //Resize 
 const resizingCheck = () => {
-  console.log('yes');
     if(window.matchMedia("(min-width:1000px)").matches) {
       console.log(position, typeof(position));
+      for (let dot of dots){
+        dot.classList.remove('active');
+      }
       slider.style.transition = 'none';
       slider.style.transform = 'none';
       activate(parseInt(position));
