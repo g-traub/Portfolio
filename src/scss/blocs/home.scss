@@ -10,7 +10,8 @@ body,html{
     transition: transform .3s;
     fill: #000;
     &:hover{
-      transform: scale(1.1);
+      fill: $gradient3;
+      background-size: 250% 250%;
     }
   }
 }
