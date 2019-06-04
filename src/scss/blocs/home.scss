@@ -50,9 +50,6 @@ body,html{
     fill: #fff;
     stroke: #000;
     animation: jump 1.5s infinite .5s;
-    &:hover{
-      animation-play-state: paused;
-    }
   }
   p{
     display:none;

@@ -27,12 +27,15 @@
     justify-content: space-between;
     .social__networks{
       margin-left: 2%;
+      display: flex;
+      align-items: center;
     }
     svg{
       margin: .2rem;
     }
   }
 }
+
 
 .contact h2::after, .page3__title::after{
   content: ' ';
